@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11434,8 +11434,8 @@ div#notebook {
     padding: 15px;
     background-color: #fff;
     min-height: 0;
-    -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
-    box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+    /* -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+    box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2); */
   }
 }
 @media print {
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13957,12 +13957,12 @@ Name: sex, dtype: int64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create another figure</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span> 
-            <span class="n">df</span><span class="o">.</span><span class="n">thalach</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span> 
-            <span class="n">c</span><span class="o">=</span><span class="s2">&quot;salmon&quot;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">thalach</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">c</span><span class="o">=</span><span class="s2">&quot;salmon&quot;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span> 
-            <span class="n">df</span><span class="o">.</span><span class="n">thalach</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">thalach</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span>
             <span class="n">c</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Heart Disease in function of Age and Max Heart Rate&quot;</span><span class="p">)</span>
@@ -14063,7 +14063,7 @@ Name: sex, dtype: int64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
-<span class="n">corr_matrix</span> 
+<span class="n">corr_matrix</span>
 </pre></div>
 
     </div>
@@ -14372,10 +14372,10 @@ Name: sex, dtype: int64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">,</span> 
-            <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-            <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
-            <span class="n">fmt</span><span class="o">=</span> <span class="s2">&quot;.2f&quot;</span><span class="p">,</span> 
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">,</span>
+            <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+            <span class="n">fmt</span><span class="o">=</span> <span class="s2">&quot;.2f&quot;</span><span class="p">,</span>
             <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlGnBu&quot;</span><span class="p">);</span>
 </pre></div>
 
@@ -14475,7 +14475,7 @@ Name: sex, dtype: int64</pre>
 <span class="k">def</span> <span class="nf">fit_and_score</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
     <span class="n">model_scores</span> <span class="o">=</span> <span class="p">{}</span>
-    
+
     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
         <span class="n">model_scores</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
@@ -14599,10 +14599,10 @@ Please also refer to the documentation for alternative solver options:
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="p">:</span>
     <span class="n">knn</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
-    
+
     <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="n">train_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
-    
+
     <span class="n">test_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 </pre></div>
 
@@ -15377,7 +15377,7 @@ Please also refer to the documentation for alternative solver options:
                     <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;True label&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Predicted label&quot;</span><span class="p">)</span>
-    
+
 <span class="n">plot_conf_mat</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">)</span>
 </pre></div>
 
@@ -15711,7 +15711,7 @@ Please also refer to the documentation for alternative solver options:
   </div>
 </body>
 
- 
+
 
 
 </html>
